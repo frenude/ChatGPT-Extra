@@ -14,4 +14,10 @@ enum MethodEnum {
     POST = "POST",
     GET = "GET"
 }
+
+interface streamWise {
+    stream?: boolean | null;
+}
+
+export type {streamWise}
 export { PathEnum ,MethodEnum}

@@ -2,27 +2,32 @@ import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { Configuration } from 'openai'
+import { Configuration, CreateChatCompletionResponse } from 'openai'
 import { OpenAiAPI } from './openai/api'
-import { parser } from './openai/parse'
+const env = import.meta.env
+
 function App() {
   const [count, setCount] = useState(0)
   useEffect(() => {
     const fetchData = async () => {
       const configuration = new Configuration({
-        basePath: 'https://api.openai.com',
-        apiKey: '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',
+        apiKey: env.VITE_OPENAI_API_KEY,
       });
       const openai = new OpenAiAPI(configuration);
+      // const openai = new OpenAIApi(configuration);
 
-      const completion = await openai.createCompletion({
-        model: 'text-davinci-003',
-        prompt: '你好'
+      const completion = await openai.createChatCompletion({
+        model: 'gpt-3.5-turbo',
+        messages: [
+          { "role": "user", "content": "Hello!" }
+        ],
         // stream: true
       });
-      console.log(completion);
-      
-      // const res = completion as Response
+
+
+      const res = completion as CreateChatCompletionResponse
+      console.log(res.choices.at(0)?.message?.content);
+
 
       // const reader = res.body?.pipeThrough(new TextDecoderStream()).getReader() as ReadableStreamDefaultReader
       // // eslint-disable-next-line no-constant-condition
@@ -31,8 +36,7 @@ function App() {
       //   if (done) {
       //     break;
       //   }
-      //   parser.feed(value)
-      //   // console.log(value);
+      //   console.log(value);
 
       // }
     }
