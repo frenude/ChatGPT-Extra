@@ -798,11 +798,11 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^5.57.1"
     "@typescript-eslint/parser": "npm:^5.57.1"
     "@vitejs/plugin-react-swc": "npm:^3.0.0"
-    dotenv-cli: "npm:^7.2.1"
     eslint: "npm:^8.38.0"
     eslint-plugin-react-hooks: "npm:^4.6.0"
     eslint-plugin-react-refresh: "npm:^0.3.4"
     eventsource-parser: "npm:^1.0.0"
+    object-to-formdata: "npm:^4.4.2"
     openai: "npm:^3.2.1"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
@@ -873,7 +873,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cross-spawn@npm:^7.0.2, cross-spawn@npm:^7.0.3":
+"cross-spawn@npm:^7.0.2":
   version: 7.0.3
   resolution: "cross-spawn@npm:7.0.3"
   dependencies:
@@ -946,34 +946,6 @@ __metadata:
   dependencies:
     esutils: "npm:^2.0.2"
   checksum: 6b38a63fa66847d80e130bb85c83c173b1050037fffac3d5f740c8c691243d5b6fadc5ec502ae8297c474680d879eb24ad8ec7f901673704fe40c8dedc1bee62
-  languageName: node
-  linkType: hard
-
-"dotenv-cli@npm:^7.2.1":
-  version: 7.2.1
-  resolution: "dotenv-cli@npm:7.2.1"
-  dependencies:
-    cross-spawn: "npm:^7.0.3"
-    dotenv: "npm:^16.0.0"
-    dotenv-expand: "npm:^10.0.0"
-    minimist: "npm:^1.2.6"
-  bin:
-    dotenv: cli.js
-  checksum: 234760c7080f338ef3a99eb0622ec9b3acac8210f7d1cdb766009d02db90ab92c4310fc85d4b2a8e48ef2a332058932cd407b7eabb442b61d352257a5fcc3db9
-  languageName: node
-  linkType: hard
-
-"dotenv-expand@npm:^10.0.0":
-  version: 10.0.0
-  resolution: "dotenv-expand@npm:10.0.0"
-  checksum: bbe61cc154763b3fc2ef5ec6422b357c8fea706932e4be585c6a8f3af2a1508f87f2badc4beb24af2913520580e754763c58769ddf667312476eb16a7c1bed34
-  languageName: node
-  linkType: hard
-
-"dotenv@npm:^16.0.0":
-  version: 16.0.3
-  resolution: "dotenv@npm:16.0.3"
-  checksum: abce82d99b45e2ebbd42625a78cadbfafe03072c15e6538b6a3a7ed204b6e091c0de929dd09231edc61f78afbdcd5b8a2f21b9e933e8ab27d75bee865a0e58c9
   languageName: node
   linkType: hard
 
@@ -1825,13 +1797,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimist@npm:^1.2.6":
-  version: 1.2.8
-  resolution: "minimist@npm:1.2.8"
-  checksum: 8598f846f2b7546b22b01ce486df27da216a302367afe17f2a032da12fcb8d33bfbf2c523051230864abf0b806748bd60d4cd0863fae35fe104da1ff6194a185
-  languageName: node
-  linkType: hard
-
 "minipass-collect@npm:^1.0.2":
   version: 1.0.2
   resolution: "minipass-collect@npm:1.0.2"
@@ -2002,6 +1967,13 @@ __metadata:
     gauge: "npm:^4.0.3"
     set-blocking: "npm:^2.0.0"
   checksum: c04307b2991f128df6f3bb71c36fa56a65397f56f02a565ed269786ecd5609818e6cae36de3371555e52fdf049a5649a3591ac3bb432a2a0146d67093c4be93c
+  languageName: node
+  linkType: hard
+
+"object-to-formdata@npm:^4.4.2":
+  version: 4.4.2
+  resolution: "object-to-formdata@npm:4.4.2"
+  checksum: c8890f978d4fc89a0bd967b4eca8c7977998d72bbd0f09b1204010caa3140650689d5a3a938226671163f6aacec5649f02014d83cd866ffbd6c2f9d088095119
   languageName: node
   linkType: hard
 

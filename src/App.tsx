@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { Configuration, CreateChatCompletionResponse } from 'openai'
+import { Configuration, CreateChatCompletionResponse, OpenAIApi } from 'openai'
 import { OpenAiAPI } from './openai/api'
 const env = import.meta.env
 
@@ -13,20 +13,12 @@ function App() {
       const configuration = new Configuration({
         apiKey: env.VITE_OPENAI_API_KEY,
       });
-      const openai = new OpenAiAPI(configuration);
-      // const openai = new OpenAIApi(configuration);
+      // const openai = new OpenAiAPI(configuration);
+      const openai = new OpenAIApi(configuration);
 
-      const completion = await openai.createChatCompletion({
-        model: 'gpt-3.5-turbo',
-        messages: [
-          { "role": "user", "content": "Hello!" }
-        ],
-        // stream: true
-      });
+      const completion = await openai.listFineTuneEvents
 
-
-      const res = completion as CreateChatCompletionResponse
-      console.log(res.choices.at(0)?.message?.content);
+      console.log(completion);
 
 
       // const reader = res.body?.pipeThrough(new TextDecoderStream()).getReader() as ReadableStreamDefaultReader
